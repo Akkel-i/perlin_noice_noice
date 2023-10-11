@@ -6,6 +6,7 @@ var rows;
 
 var zOffset = 0.0001;
 let sliderValue1 = zOffset;
+var vectorMag = 0.3;
 
 
 var fr;
@@ -16,7 +17,9 @@ var flowfield;
 
 
 function setup() {
-    createCanvas(1000, 600);
+    var theCanvas = createCanvas(1000, 600);
+    theCanvas.position((width / 3), (height / 4));
+    theCanvas.parent('container');
     colorMode(HSB, 255);
     columns = floor(width / scl);
     rows = floor(height / scl);
@@ -26,7 +29,7 @@ function setup() {
     flowfield = new Array(columns * rows);
 
     // kuinka monta pikseliä
-    for (var i = 0; i < 1500; i++) {
+    for (var i = 0; i < 3000; i++) {
         particles[i] = new Particle();
     }
     background(180);
@@ -45,7 +48,7 @@ function draw() {
             var index = x + y * columns;
             var angle = noise(xOffset, yOffset, zOffset) * TWO_PI * 4; // vektorien suunnan laskentaa
             var v = p5.Vector.fromAngle(angle);
-            v.setMag(0.3); // kuinka vahva flow field vektorien vetovoima on
+            v.setMag(vectorMag); // kuinka vahva flow field vektorien vetovoima on
 
       
             flowfield[index] = v;
@@ -102,7 +105,7 @@ function draw() {
   slider2.addEventListener("input", function () {
     sliderValue2 = parseFloat(slider2.value);
     slider2ValueDisplay.textContent = sliderValue2;
-    v.setMag(sliderValue2);
+    vectorMag = sliderValue2;
   });
 
 
