@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Perlin Noise</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+  </head>
+  <body>
+
+
+    <div class="contents">
+      <h1>Perlin noise & flowfields</h1>
+
+
+
+     <!--  <script src="scripts/perlin_scetch.js"></script>-->
+      <script src="perlin_scetch_flow_field copy.js"></script>
+      <script src="particle copy.js"></script>
+
+    <!-- <canvas class="canvas"></canvas> -->
+    </div>
+
+    <label for="slider1">Vector direction change speed: <span id="slider1-value">0.0001</span></label>
+    <input type="range" id="slider1" min="0" max="0.001" step="0.00001" value="0.0001">
+    
+    <label for="slider2">Vector gravity: <span id="slider2-value">0.001</span></label>
+    <input type="range" id="slider2" min="0" max="10" step="0.001" value="0.001">
+    
+    <label for="slider3">Line maxspeed: <span id="slider3-value">2</span></label>
+    <input type="range" id="slider3" min="0" max="5" step="0.5" value="2">
+    
+    <div id="container"></div>
+
+    <!-- <script src="scripts/perlin_scetch.js"></script>-->
+  </body>
+</html>
