@@ -91,7 +91,7 @@ function setup() {
     flowfield = new Array(columns * rows);
 
     // kuinka monta pikseliä tulee kuinka monta looppia
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 1; i++) {
         particles[i] = new Particle();
     }
     background(200);
