@@ -4,7 +4,6 @@ let isAppInit = false;
 appContents.style.display = "none";
 
 window.addEventListener("keydown", init);
-window.addEventListener("click", init);
 
 function init() {
   if (isAppInit) {
